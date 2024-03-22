@@ -6,8 +6,8 @@ import {
 	commandUse,
 	commandSet,
 	commandDel,
-} from './commands/index.js';
-import { readSourceConfig } from './sourceConfig.js';
+} from './core/commands.js';
+import { readSourceConfig } from './core/sourceConfig.js';
 
 const sourceList = readSourceConfig();
 

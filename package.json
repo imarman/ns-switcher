@@ -18,5 +18,9 @@
 	},
   "bin": {
     "nss": "./index.js"
-  }
+  },
+	"files": [
+		"index.js",
+		"core/"
+	]
 }

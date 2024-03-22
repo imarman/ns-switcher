@@ -1,6 +1,6 @@
 import inquirer from 'inquirer';
 import { execSync } from 'child_process';
-import { addSource, delSource, readSourceConfig } from '../sourceConfig.js';
+import { addSource, delSource, readSourceConfig } from './sourceConfig.js';
 
 const sourceList = readSourceConfig();
 
