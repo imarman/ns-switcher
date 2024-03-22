@@ -20,6 +20,6 @@ nss use <name>
 nss del <name>
 
 # 新增源信息
-nss set
+nss add
 ```
 

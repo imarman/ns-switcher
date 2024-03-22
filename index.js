@@ -31,7 +31,7 @@ if (args.length === 2) {
 		commandDel();
 	} else if (args[0] === 'help' || args[0] === '-h') {
 		commandHelp();
-	} else if (args[0] === 'set') {
+	} else if (args[0] === 'add') {
 		commandSet();
 	} else {
 		exitNotice();

@@ -1,13 +1,12 @@
 import fs from 'node:fs';
 import os from 'node:os';
-import { sourceList } from './sources.js';
 
 const filePath = os.homedir() + '/.ns-switcher';
 
 export function readSourceConfig() {
 	if (!fs.existsSync(filePath)) {
-		writeData(sourceList);
-		return sourceList;
+		writeData(initSources);
+		return initSources;
 	}
 
 	const cachedList = fs.readFileSync(filePath);
@@ -22,8 +21,8 @@ export function addSource(source) {
 			return;
 		}
 	}
-	sourceList.push(source);
-	writeData(sourceList);
+	initSources.push(source);
+	writeData(initSources);
 }
 
 export function delSource(sourceName) {
@@ -40,3 +39,22 @@ export function delSource(sourceName) {
 function writeData(data) {
 	fs.writeFileSync(filePath, JSON.stringify(data));
 }
+
+
+const initSources = [
+	{
+		name: 'npm',
+		url: 'https://registry.npmjs.org/',
+		desc: '官方源',
+	},
+	{
+		name: 'taobao',
+		url: 'https://registry.npmmirror.com/',
+		desc: '淘宝',
+	},
+	{
+		name: 'tuna',
+		url: 'https://mirrors.tuna.tsinghua.edu.cn/',
+		desc: '清华',
+	},
+];

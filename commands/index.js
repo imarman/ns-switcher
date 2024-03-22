@@ -33,7 +33,7 @@ export function commandHelp() {
 	切换源: nss use <name>
 	查看源列表: nss -l
 	删除源: nss del <name>
-	新增源信息: nss set
+	新增源信息: nss add
 	`);
 }
 
