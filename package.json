@@ -1,6 +1,6 @@
 {
 	"name": "ns-switcher",
-	"version": "0.0.1",
+	"version": "0.0.4",
 	"description": "NPM source switcher,切换 NPM 源",
 	"main": "index.js",
 	"type": "module",
